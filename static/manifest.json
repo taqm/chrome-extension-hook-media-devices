@@ -5,8 +5,17 @@
   "content_scripts": [
     {
       "matches": ["https://*/*"],
-      "js": ["content.js"],
-      "run_at": "document_start"
+      "js": ["loader.js"]
+    }
+  ],
+  "permissions": [
+    "https://localhost:*/",
+    "https://meet.google.com/"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["https://*/*"]
     }
   ]
 }
